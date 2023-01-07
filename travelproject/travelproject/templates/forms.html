@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body style="background-color:yellow">
+        <form action='' method='POST'>
+            {% csrf_token %}
+            USERNAME<input type='text' name='username'><br>
+            FIRSTNAME<input type='text' name='first_name'><br>
+            LASTNAME<input type='text' name='last_name'><br>
+            EMAIL<input type='email' name='email'><br>
+            PASSWORD1<input type='password' name='password1'><br>
+            PASSWORD2<input type='password' name='password2'><br>
+            LOGIN<input type='submit'>
+        </form>
+        {% for i in messages %}
+	    {{i}}
+        {% endfor %}
+
+    </body>
+</html>
+
